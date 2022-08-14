@@ -1,6 +1,7 @@
 <template>
-  <header>
+  <header class=" ">
     <navbar />
+    <nuxt />
   </header>
 </template>
 <script>
