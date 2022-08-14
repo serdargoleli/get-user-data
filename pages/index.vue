@@ -2,17 +2,16 @@
   <main class="dark">
     <section class="border-gray-300 dark:bg-gray-800 h-screen">
       <div class="container mx-auto">
-        <div class="main-content flex">
+        <loader v-if="isLoader === true" />
+        <div class="main-content flex" v-else>
           <div class="main-content-left w-6/12 h-full relative">
             <div class="cs-ellipse cs-blue"></div>
             <div class="cs-ellipse cs-green"></div>
             <div class="cs-ellipse cs-red"></div>
             <div class="cs-ellipse cs-yellow"></div>
-            <div class="cs-img-box img-box" style="background-image: url('https://picsum.photos/800/800')"></div>
-            <div class="cs-img-box img-box-content" style="background-image: url('https://picsum.photos/800/800')"></div>
           </div>
           <div class="main-content-right w-6/12 relative">
-            <card />
+            <card :getData="getData" :user="user" />
           </div>
         </div>
       </div>
@@ -22,23 +21,31 @@
 
 <script>
 import card from '~/components/card.vue'
+import loader from '~/components/loader.vue'
 export default {
   name: 'IndexPage',
   layout: 'default',
   components: {
     card,
+    loader,
+  },
+  created() {
+    this.getData()
   },
   data() {
     return {
       user: {},
+      isLoader: true,
+      bgImage: '',
     }
   },
   methods: {
-    getData() {
-      this.$axios.$get().then((result) => {
+    async getData() {
+      await this.$axios.$get().then((result) => {
         if (result.results.length > 0) {
           this.user = result.results[0]
-          console.log(this.user)
+          /*  this.bgImage = "background-image: url('" + this.user.picture.medium */
+          this.isLoader = false
         }
       })
     },
@@ -73,28 +80,5 @@ export default {
 .cs-red {
   background: #b91c1c;
   transform: translate(74%, 76%);
-}
-.cs-img-box {
-  border-radius: 10px;
-  position: absolute;
-  left: 50%;
-  top: 47%;
-  background-size: cover;
-  margin: auto;
-}
-
-.img-box {
-  z-index: 11;
-  width: 411px;
-  height: 476px;
-  filter: blur(29px);
-  transform: translate(-50%, 21%);
-}
-.img-box-content {
-  z-index: 99;
-  width: 380px;
-  height: 445px;
-  transform: translate(-50%, 26%);
-  transition: 0.3s all;
 }
 </style>
