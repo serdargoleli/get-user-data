@@ -9,6 +9,16 @@
             <div class="cs-ellipse cs-green"></div>
             <div class="cs-ellipse cs-red"></div>
             <div class="cs-ellipse cs-yellow"></div>
+            <div class="glassmorphism w-3/4">
+              <div
+                class="block p-6 max-w-sm bg-white rounded-lg border border-gray-200 shadow-md hover:bg-gray-100 dark:bg-gray-700 dark:border-gray-700"
+              >
+                <h5 class="mb-2 text-2xl font-bold tracking-tight text-gray-900 dark:text-white">Random User Data</h5>
+                <p class="font-normal text-gray-700 dark:text-gray-400">
+                  Here are the biggest enterprise technology acquisitions of 2021 so far, in reverse chronological order.
+                </p>
+              </div>
+            </div>
           </div>
           <div class="main-content-right w-6/12 relative">
             <card :getData="getData" :user="user" />
@@ -56,7 +66,6 @@ export default {
 <style lang="css">
 .cs-ellipse {
   width: 50%;
-
   height: 320px;
   filter: blur(68px);
   position: absolute;
@@ -80,5 +89,11 @@ export default {
 .cs-red {
   background: #b91c1c;
   transform: translate(74%, 76%);
+}
+.glassmorphism {
+  padding: 20px;
+  position: absolute;
+  transform: translate(0, 110%);
+  z-index: 99;
 }
 </style>
