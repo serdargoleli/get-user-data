@@ -1,6 +1,6 @@
 <template>
   <header :class="themee" class="header">
-    <nav class="nav">
+    <nav class="nav border-gray-200 dark:border-gray-600">
       <div class="nav-container">
         <a href="https://serdargoleli.github.io/" class="nav-logo">
           <span class="logo">SERDAR GÖLELİ</span>
