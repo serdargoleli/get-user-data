@@ -7,3 +7,23 @@
 * {
   transition: 0.3s all;
 }
+
+/* width */
+::-webkit-scrollbar {
+  width: 8px;
+}
+
+/* Track */
+::-webkit-scrollbar-track {
+  background: #111827;
+}
+
+/* Handle */
+::-webkit-scrollbar-thumb {
+  background: #1f2937;
+}
+
+/* Handle on hover */
+::-webkit-scrollbar-thumb:hover {
+  background: #374151;
+}

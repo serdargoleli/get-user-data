@@ -5,4 +5,4 @@
          dark:text-gray-400
          md:dark:hover:text-white
          dark:hover:bg-gray-700 dark:hover:text-white 
-          md:dark:hover:bg-transparent}.nav-menu .btn-dark-mode{width:36px;height:36px;background-color:#3e4350;color:#bdbdbd;@apply rounded-md p-2 hover:bg-gray-700 duration-300 flex items-center}.nav-menu .btn-dark-mode:hover{background-color:#b6b6b68a;color:#bdbdbd}*{transition:0.3s all}
+          md:dark:hover:bg-transparent}.nav-menu .btn-dark-mode{width:36px;height:36px;background-color:#3e4350;color:#bdbdbd;@apply rounded-md p-2 hover:bg-gray-700 duration-300 flex items-center}.nav-menu .btn-dark-mode:hover{background-color:#b6b6b68a;color:#bdbdbd}*{transition:0.3s all}::-webkit-scrollbar{width:8px}::-webkit-scrollbar-track{background:#111827}::-webkit-scrollbar-thumb{background:#1f2937}::-webkit-scrollbar-thumb:hover{background:#374151}

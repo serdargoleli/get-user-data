@@ -91,7 +91,4 @@ export default {
   transform: translate(0, 110%);
   z-index: 99;
 }
-.card {
-  background: red;
-}
 </style>

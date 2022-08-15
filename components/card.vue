@@ -81,25 +81,25 @@ export default {
   top: 50%;
   left: 50%;
   transform: translate(-50%, 13%);
-  @apply w-3/4 p-7 rounded-lg  shadow-md dark:bg-gray-900 absolute;
+  @apply w-3/4 p-7 rounded-lg shadow-md absolute bg-gray-300 dark:bg-gray-900;
 }
 .subtitle {
-  @apply text-base font-normal text-gray-400 mb-1;
+  @apply text-base font-normal mb-1 text-gray-500 dark:text-gray-200;
 }
 .title {
-  @apply text-2xl font-bold text-gray-50 mb-4;
+  @apply text-2xl font-bold mb-4 text-gray-700 dark:text-gray-50;
 }
 .content-box {
-  @apply p-3 dark:bg-gray-800 mb-3 rounded-lg dark:text-gray-400;
+  @apply p-3  bg-gray-200 dark:bg-gray-800 mb-3 rounded-lg dark:text-gray-400;
 }
 .content-box .label {
-  @apply dark:text-gray-500 font-normal text-xs;
+  @apply text-gray-500 dark:text-gray-500 font-normal text-xs;
 }
 .content-box .label + span {
-  @apply dark:text-gray-100 font-normal text-sm;
+  @apply text-gray-900 dark:text-gray-200 font-medium text-sm;
 }
 .btn-yellow {
-  @apply bg-yellow-500 p-2 rounded-lg dark:text-gray-100 w-full hover:bg-yellow-600;
+  @apply bg-yellow-500 p-2 rounded-lg dark:text-gray-100 w-full hover:bg-yellow-600 font-medium;
 }
 .cs-content-box .content-box {
   @apply flex flex-col;
