@@ -111,13 +111,4 @@ export default {
 
   @apply absolute rounded-xl z-50 bg-cover right-0 m-auto;
 }
-.home-card {
-  @apply block p-6 max-w-sm bg-white rounded-lg border border-gray-200 shadow-md hover:bg-gray-100 dark:bg-gray-700 dark:border-gray-700;
-}
-.home-card h5 {
-  @apply mb-2 text-2xl font-bold tracking-tight text-gray-900 dark:text-white;
-}
-.home-card p {
-  @apply font-normal text-gray-700 dark:text-gray-400;
-}
 </style>

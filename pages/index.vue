@@ -11,8 +11,22 @@
             <div class="cs-ellipse cs-yellow"></div>
             <div class="glassmorphism w-3/4">
               <div class="home-card">
-                <h5>{{ themee }} Random User Data</h5>
-                <p>Here are the biggest enterprise technology acquisitions of 2021 so far, in reverse chronological order.</p>
+                <span class="svg-box">
+                  <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
+                    <path stroke-linecap="round" stroke-linejoin="round" d="M16 7a4 4 0 11-8 0 4 4 0 018 0zM12 14a7 7 0 00-7 7h14a7 7 0 00-7-7z" />
+                  </svg>
+                </span>
+                <h5>Random User Data</h5>
+                <p>
+                  Bu uygulama <a href="https://randomuser.me" target="_blank" class="">randomuser.me</a> kullanılarak geliştirilmiştir. Herhangi bir
+                  kâr amacı gütmemektedir.
+                </p>
+                <p class="social-media mt-3">
+                  <span class="inline-block mr-1">&#8226; <a href="https://github.com/serdargoleli" target="_blank">GitHub</a></span>
+                  <span class="inline-block mr-1">&#8226; <a href="https://www.linkedin.com/in/serdargoleli/" target="_blank">Linkedin</a></span>
+                  <span class="inline-block">&#8226; <a href="https://www.behance.net/serdargoleli" target="_blank">Behance</a></span>
+                  <span class="inline-block mr-1">&#8226; <a href="https://twitter.com/serdargoleli" target="_blank">Twitter</a></span>
+                </p>
               </div>
             </div>
           </div>
@@ -88,7 +102,25 @@ export default {
 }
 .glassmorphism {
   position: absolute;
-  transform: translate(0, 110%);
+  transform: translate(15%, 77%);
   z-index: 99;
+}
+.home-card {
+  @apply block p-6 max-w-sm rounded-lg shadow-md bg-gray-300 dark:bg-gray-900;
+}
+.home-card h5 {
+  @apply mb-2 text-2xl font-bold tracking-tight text-gray-700 dark:text-gray-50;
+}
+.home-card p {
+  @apply font-normal text-gray-600 dark:text-gray-400;
+}
+.home-card p a {
+  @apply font-medium text-gray-600 dark:text-gray-300 hover:text-gray-900 dark:hover:text-white;
+}
+
+.svg-box {
+  @apply mb-3 inline-flex items-center justify-center p-2 rounded-md shadow-lg
+  bg-gray-200 dark:bg-yellow-400 
+  text-gray-900;
 }
 </style>
