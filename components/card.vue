@@ -90,14 +90,12 @@ export default {
   @apply text-2xl font-bold text-gray-50 mb-4;
 }
 .content-box {
-  transition: 0.3s all;
   @apply p-3 dark:bg-gray-800 mb-3 rounded-lg dark:text-gray-400;
 }
 .content-box .label {
   @apply dark:text-gray-500 font-normal text-xs;
 }
 .content-box .label + span {
-  transition: 0.3s all;
   @apply dark:text-gray-100 font-normal text-sm;
 }
 .btn-yellow {
@@ -110,7 +108,7 @@ export default {
   top: -59px;
   width: 120px;
   height: 120px;
-  transition: 0.3s all;
+
   @apply absolute rounded-xl z-50 bg-cover right-0 m-auto;
 }
 .home-card {

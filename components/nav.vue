@@ -1,5 +1,5 @@
 <template>
-  <header :class="themee" class="header">
+  <header class="header">
     <nav class="nav border-gray-200 dark:border-gray-600">
       <div class="nav-container">
         <a href="https://serdargoleli.github.io/" class="nav-logo">
@@ -35,19 +35,10 @@
 import lightMode from '~/components/light-mode.vue'
 import darkMode from '~/components/dark-mode.vue'
 export default {
+  props: ['selectThemee', 'themee'],
   components: {
     lightMode,
     darkMode,
-  },
-  data() {
-    return {
-      themee: 'dark',
-    }
-  },
-  methods: {
-    selectThemee() {
-      this.themee = this.themee === 'dark' ? 'light' : 'dark'
-    },
   },
 }
 </script>

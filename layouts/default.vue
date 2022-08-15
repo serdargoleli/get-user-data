@@ -1,7 +1,7 @@
 <template>
-  <header class="">
-    <navbar />
-    <nuxt-child :themee="themee" />
+  <header :class="themee">
+    <navbar :selectThemee="selectThemee" :themee="themee" />
+    <nuxt-child />
   </header>
 </template>
 <script>
@@ -13,8 +13,13 @@ export default {
   },
   data() {
     return {
-      themee: 'light',
+      themee: 'dark',
     }
+  },
+  methods: {
+    selectThemee() {
+      this.themee = this.themee === 'dark' ? 'light' : 'dark'
+    },
   },
 }
 </script>
