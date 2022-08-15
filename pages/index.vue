@@ -1,6 +1,6 @@
 <template>
   <main :class="themee">
-    <section class="border-gray-300 dark:bg-gray-800 h-screen">
+    <section class="bg-gray-200 dark:bg-gray-800 h-screen">
       <div class="container mx-auto">
         <loader v-if="isLoader === true" />
         <div class="main-content flex" v-else>

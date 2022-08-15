@@ -2,11 +2,10 @@
   <header class="header">
     <nav class="nav border-gray-200 dark:border-gray-600">
       <div class="nav-container">
-        <a href="https://serdargoleli.github.io/" class="nav-logo">
+        <a href="https://serdargoleli.github.io/" target="_blank" class="nav-logo">
           <span class="logo">SERDAR GÖLELİ</span>
           <span>Random User Data</span>
         </a>
-
         <div class="nav-menu" id="navbar-default">
           <ul class="nav-menu-list">
             <li class="nav-menu-list-item">

@@ -1,36 +1,43 @@
 .nav {
-  height: 85px;
-  @apply bg-gray-200 border-gray-300 border-b-2 px-2 sm:px-4 py-2.5 dark:bg-gray-900 relative z-50;
+  @apply bg-gray-200 border-gray-300 dark:border-gray-900 border-b-2 px-2 sm:px-4 py-2.5 dark:bg-gray-900 relative z-50;
   &-container {
     @apply container flex flex-wrap justify-between items-center mx-auto;
   }
   &-logo {
     @apply flex  flex-col;
     .logo {
-      @apply text-gray-900  dark:text-gray-50 font-bold text-2xl;
+      @apply text-gray-700  font-bold text-2xl dark:text-gray-50;
       & + span {
         @apply text-gray-400 text-sm;
       }
     }
   }
   &-menu {
-    @apply hidden w-full md:block md:w-auto;
+    @apply block w-auto;
     &-list {
       @apply flex flex-row items-center space-x-8 p-4 mt-0 text-sm font-medium;
 
       &-item a {
-        @apply block py-2 pr-4 pl-3 text-gray-700 rounded hover:bg-gray-100 md:hover:bg-transparent md:border-0 md:hover:text-blue-700 md:p-0 dark:text-gray-400 md:dark:hover:text-white dark:hover:bg-gray-700 dark:hover:text-white md:dark:hover:bg-transparent;
+        @apply block
+         py-2 pr-4 pl-3 text-gray-700 rounded
+          md:hover:bg-transparent 
+         md:border-0 md:hover:text-blue-700 md:p-0 
+         dark:text-gray-400
+         md:dark:hover:text-white
+         dark:hover:bg-gray-700 dark:hover:text-white 
+          md:dark:hover:bg-transparent;
       }
     }
     .btn-dark-mode {
+      width: 36px;
+      height: 36px;
       background-color: #3e4350;
       color: #bdbdbd;
       &:hover {
         background-color: #b6b6b68a;
         color: #bdbdbd;
       }
-
-      @apply rounded-md p-2 hover:bg-gray-700 duration-300;
+      @apply rounded-md p-2 hover:bg-gray-700 duration-300 flex items-center;
     }
   }
 }
