@@ -1,9 +1,9 @@
 <template>
   <main :class="themee">
-    <section class="bg-gray-200 dark:bg-gray-800 h-screen">
+    <section class="bg-gray-200 dark:bg-gray-800">
       <div class="container mx-auto">
         <loader v-if="isLoader === true" />
-        <div class="main-content flex" v-else>
+        <div class="main-content" v-else>
           <div class="main-content-left w-6/12 h-full relative">
             <div class="cs-ellipse cs-blue"></div>
             <div class="cs-ellipse cs-green"></div>
@@ -83,27 +83,29 @@ export default {
 }
 .cs-yellow {
   background: #fbbf24;
-  transform: translate(5%, 20%);
+  transform: translate(5%, -25%);
   z-index: 3;
 }
 .cs-blue {
   background: #3b82f6;
-  transform: translate(70%, 20%);
+  transform: translate(70%, -31%);
   z-index: 2;
 }
 .cs-green {
   background: #34d399;
-  transform: translate(5%, 76%);
+  transform: translate(-11%, 25%);
   z-index: 1;
 }
 .cs-red {
   background: #b91c1c;
-  transform: translate(74%, 76%);
+  transform: translate(74%, 5%);
+}
+
+.main-content {
+  @apply flex items-center py-20;
 }
 .glassmorphism {
-  position: absolute;
-  transform: translate(15%, 77%);
-  z-index: 99;
+  @apply relative z-10;
 }
 .home-card {
   @apply block p-6 max-w-sm rounded-lg shadow-md bg-gray-300 dark:bg-gray-900;

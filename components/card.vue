@@ -78,10 +78,7 @@ export default {
 </script>
 <style lang="postcss">
 .card {
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, 13%);
-  @apply w-3/4 p-7 rounded-lg shadow-md absolute bg-gray-300 dark:bg-gray-900;
+  @apply w-3/4 p-7 rounded-lg shadow-md  bg-gray-300 dark:bg-gray-900;
 }
 .subtitle {
   @apply text-base font-normal mb-1 text-gray-500 dark:text-gray-200;
@@ -108,7 +105,6 @@ export default {
   top: -59px;
   width: 120px;
   height: 120px;
-
-  @apply absolute rounded-xl z-50 bg-cover right-0 m-auto;
+  @apply absolute rounded-xl z-10 bg-cover right-0 m-auto;
 }
 </style>
