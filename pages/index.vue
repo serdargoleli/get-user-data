@@ -1,15 +1,15 @@
 <template>
   <main :class="themee">
     <section class="bg-gray-200 dark:bg-gray-800">
-      <div class="container mx-auto">
+      <div class="container w-11/12 md:w-full mx-auto">
         <loader v-if="isLoader === true" />
         <div class="main-content" v-else>
-          <div class="main-content-left w-6/12 h-full relative">
+          <div class="main-content-left">
             <div class="cs-ellipse cs-blue"></div>
             <div class="cs-ellipse cs-green"></div>
             <div class="cs-ellipse cs-red"></div>
             <div class="cs-ellipse cs-yellow"></div>
-            <div class="glassmorphism w-3/4">
+            <div class="glassmorphism">
               <div class="home-card">
                 <span class="svg-box">
                   <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
@@ -30,7 +30,7 @@
               </div>
             </div>
           </div>
-          <div class="main-content-right w-6/12 relative">
+          <div class="main-content-right">
             <card :getData="getData" :user="user" />
           </div>
         </div>
@@ -74,6 +74,39 @@ export default {
 </script>
 
 <style lang="postcss">
+.main-content {
+  @apply flex flex-col items-center py-20 
+  md:flex-row;
+}
+.main-content-left,
+.main-content-right {
+  @apply relative
+  w-full md:w-6/12;
+}
+
+.glassmorphism {
+  @apply relative z-10;
+}
+
+.home-card {
+  @apply block p-6 max-w-sm rounded-lg shadow-md bg-gray-300 dark:bg-gray-900 
+  m-auto md:ml-auto;
+}
+.home-card h5 {
+  @apply mb-2 text-2xl font-bold tracking-tight text-gray-700 dark:text-gray-50;
+}
+.home-card p {
+  @apply font-normal text-gray-600 dark:text-gray-400;
+}
+.home-card p a {
+  @apply font-medium text-gray-600 dark:text-gray-300 hover:text-gray-900 dark:hover:text-white;
+}
+.svg-box {
+  @apply mb-3 inline-flex items-center justify-center p-2 rounded-md shadow-lg
+  bg-gray-200 dark:bg-yellow-400 
+  text-gray-900;
+}
+
 .cs-ellipse {
   width: 50%;
   height: 320px;
@@ -99,30 +132,5 @@ export default {
 .cs-red {
   background: #b91c1c;
   transform: translate(74%, 5%);
-}
-
-.main-content {
-  @apply flex items-center py-20;
-}
-.glassmorphism {
-  @apply relative z-10;
-}
-.home-card {
-  @apply block p-6 max-w-sm rounded-lg shadow-md bg-gray-300 dark:bg-gray-900;
-}
-.home-card h5 {
-  @apply mb-2 text-2xl font-bold tracking-tight text-gray-700 dark:text-gray-50;
-}
-.home-card p {
-  @apply font-normal text-gray-600 dark:text-gray-400;
-}
-.home-card p a {
-  @apply font-medium text-gray-600 dark:text-gray-300 hover:text-gray-900 dark:hover:text-white;
-}
-
-.svg-box {
-  @apply mb-3 inline-flex items-center justify-center p-2 rounded-md shadow-lg
-  bg-gray-200 dark:bg-yellow-400 
-  text-gray-900;
 }
 </style>
