@@ -1,5 +1,5 @@
 <template>
-  <main class="dark">
+  <main :class="themee">
     <section class="border-gray-300 dark:bg-gray-800 h-screen">
       <div class="container mx-auto">
         <loader v-if="isLoader === true" />
@@ -10,13 +10,9 @@
             <div class="cs-ellipse cs-red"></div>
             <div class="cs-ellipse cs-yellow"></div>
             <div class="glassmorphism w-3/4">
-              <div
-                class="block p-6 max-w-sm bg-white rounded-lg border border-gray-200 shadow-md hover:bg-gray-100 dark:bg-gray-700 dark:border-gray-700"
-              >
-                <h5 class="mb-2 text-2xl font-bold tracking-tight text-gray-900 dark:text-white">Random User Data</h5>
-                <p class="font-normal text-gray-700 dark:text-gray-400">
-                  Here are the biggest enterprise technology acquisitions of 2021 so far, in reverse chronological order.
-                </p>
+              <div class="home-card">
+                <h5>{{ themee }} Random User Data</h5>
+                <p>Here are the biggest enterprise technology acquisitions of 2021 so far, in reverse chronological order.</p>
               </div>
             </div>
           </div>
@@ -35,6 +31,7 @@ import loader from '~/components/loader.vue'
 export default {
   name: 'IndexPage',
   layout: 'default',
+  props: ['themee'],
   components: {
     card,
     loader,
@@ -54,7 +51,6 @@ export default {
       await this.$axios.$get().then((result) => {
         if (result.results.length > 0) {
           this.user = result.results[0]
-          /*  this.bgImage = "background-image: url('" + this.user.picture.medium */
           this.isLoader = false
         }
       })
@@ -63,7 +59,7 @@ export default {
 }
 </script>
 
-<style lang="css">
+<style lang="postcss">
 .cs-ellipse {
   width: 50%;
   height: 320px;
@@ -91,9 +87,11 @@ export default {
   transform: translate(74%, 76%);
 }
 .glassmorphism {
-  padding: 20px;
   position: absolute;
   transform: translate(0, 110%);
   z-index: 99;
+}
+.card {
+  background: red;
 }
 </style>

@@ -9,10 +9,21 @@
       <span class="label">Email:</span>
       <span>{{ user.email }}</span>
     </div>
-    <div class="content-box">
-      <span class="label">Phone:</span>
-      <span>{{ user.phone }}</span>
+    <div class="flex cs-content-box">
+      <div class="w-1/2 pr-1">
+        <div class="content-box">
+          <span class="label">Phone:</span>
+          <span>{{ user.phone }}</span>
+        </div>
+      </div>
+      <div class="w-1/2 pl-1">
+        <div class="content-box">
+          <span class="label">Male:</span>
+          <span>{{ user.gender }}</span>
+        </div>
+      </div>
     </div>
+
     <div class="flex cs-content-box">
       <div class="w-1/2 pr-1">
         <div class="content-box">
@@ -67,11 +78,10 @@ export default {
 </script>
 <style lang="postcss">
 .card {
-  position: absolute;
   top: 50%;
   left: 50%;
   transform: translate(-50%, 13%);
-  @apply w-3/4 p-7 rounded-lg  shadow-md dark:bg-gray-900;
+  @apply w-3/4 p-7 rounded-lg  shadow-md dark:bg-gray-900 absolute;
 }
 .subtitle {
   @apply text-base font-normal text-gray-400 mb-1;
@@ -97,15 +107,19 @@ export default {
   @apply flex flex-col;
 }
 .cs-img-box {
-  border-radius: 10px;
-  position: absolute;
-  right: 0;
   top: -59px;
-  background-size: cover;
-  margin: auto;
   width: 120px;
   height: 120px;
   transition: 0.3s all;
-  z-index: 99;
+  @apply absolute rounded-xl z-50 bg-cover right-0 m-auto;
+}
+.home-card {
+  @apply block p-6 max-w-sm bg-white rounded-lg border border-gray-200 shadow-md hover:bg-gray-100 dark:bg-gray-700 dark:border-gray-700;
+}
+.home-card h5 {
+  @apply mb-2 text-2xl font-bold tracking-tight text-gray-900 dark:text-white;
+}
+.home-card p {
+  @apply font-normal text-gray-700 dark:text-gray-400;
 }
 </style>
