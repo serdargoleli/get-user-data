@@ -2,8 +2,7 @@
   <main :class="themee">
     <section class="bg-gray-200 dark:bg-gray-800">
       <div class="container w-11/12 md:w-full mx-auto">
-        <loader v-if="isLoader === true" />
-        <div class="main-content" v-else>
+        <div class="main-content">
           <div class="main-content-left">
             <div class="cs-ellipse cs-blue"></div>
             <div class="cs-ellipse cs-green"></div>
@@ -25,13 +24,14 @@
                   <span class="inline-block mr-1">&#8226; <a href="https://github.com/serdargoleli" target="_blank">GitHub</a></span>
                   <span class="inline-block mr-1">&#8226; <a href="https://www.linkedin.com/in/serdargoleli/" target="_blank">Linkedin</a></span>
                   <span class="inline-block">&#8226; <a href="https://www.behance.net/serdargoleli" target="_blank">Behance</a></span>
-                  <span class="inline-block mr-1">&#8226; <a href="https://twitter.com/serdargoleli" target="_blank">Twitter</a></span>
+                  <span class="inline-block mr-1">&#8226; <a href="https://medium.com/@serdargoleli" target="_blank">Medium</a></span>
                 </p>
               </div>
             </div>
           </div>
           <div class="main-content-right">
-            <card :getData="getData" :user="user" />
+            <loader v-if="isLoader === true" />
+            <card :getData="getData" :user="user" v-else />
           </div>
         </div>
       </div>

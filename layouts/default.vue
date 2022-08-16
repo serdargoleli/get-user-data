@@ -11,15 +11,29 @@ export default {
   components: {
     Navbar,
   },
+  created() {
+    if (this.getCookieThemee) {
+      this.themee = this.getCookieThemee
+    } else {
+      this.$cookiz.set('themee', this.themee, {
+        path: '/',
+        maxAge: 60 * 60 * 24 * 365,
+      })
+    }
+  },
   data() {
     return {
+      getCookieThemee: this.$cookiz.get('themee'),
       themee: 'dark',
     }
   },
   methods: {
     selectThemee() {
-      this.$cookiz.set('lang', 1)
       this.themee = this.themee === 'dark' ? 'light' : 'dark'
+      this.$cookiz.set('themee', this.themee, {
+        path: '/',
+        maxAge: 60 * 60 * 24 * 365,
+      })
     },
   },
 }
