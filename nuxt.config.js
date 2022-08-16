@@ -34,7 +34,7 @@ export default {
     // https://go.nuxtjs.dev/tailwindcss
     '@nuxtjs/tailwindcss',
     '@nuxt/postcss8',
-    //https://color-mode.nuxtjs.org/
+    'cookie-universal-nuxt',
   ],
 
   // Modules: https://go.nuxtjs.dev/config-modules
