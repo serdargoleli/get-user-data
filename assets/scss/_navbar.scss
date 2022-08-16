@@ -1,7 +1,10 @@
 .nav {
   @apply bg-gray-200 border-gray-300 dark:border-gray-900 border-b-2 px-2 sm:px-4 py-2.5 dark:bg-gray-900 relative z-50;
   &-container {
-    @apply container flex flex-wrap justify-between items-center mx-auto;
+    @apply container flex flex-wrap
+    justify-center md:justify-between
+    flex-col-reverse md:flex-row 
+    items-center mx-auto text-center;
   }
   &-logo {
     @apply flex  flex-col;
