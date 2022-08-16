@@ -18,6 +18,7 @@ export default {
   },
   methods: {
     selectThemee() {
+      this.$cookiz.set('lang', 1)
       this.themee = this.themee === 'dark' ? 'light' : 'dark'
     },
   },

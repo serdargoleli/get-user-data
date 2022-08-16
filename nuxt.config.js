@@ -34,13 +34,13 @@ export default {
     // https://go.nuxtjs.dev/tailwindcss
     '@nuxtjs/tailwindcss',
     '@nuxt/postcss8',
-    'cookie-universal-nuxt',
   ],
 
   // Modules: https://go.nuxtjs.dev/config-modules
   modules: [
     // https://go.nuxtjs.dev/axios
     '@nuxtjs/axios',
+    ['cookie-universal-nuxt', { alias: 'cookiz' }]
   ],
 
   // Axios module configuration: https://go.nuxtjs.dev/config-axios
