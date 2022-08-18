@@ -9,7 +9,7 @@ export default {
   head: {
     title: 'get-user-data',
     htmlAttrs: {
-      lang: 'en',
+      lang: 'tr',
     },
     meta: [
       { charset: 'utf-8' },
@@ -40,7 +40,9 @@ export default {
   modules: [
     // https://go.nuxtjs.dev/axios
     '@nuxtjs/axios',
-    ['cookie-universal-nuxt', { alias: 'cookiz' }]
+    ['cookie-universal-nuxt', { alias: 'cookiz' }],
+    //  https://i18n.nuxtjs.org/
+    '@nuxtjs/i18n',
   ],
 
   // Axios module configuration: https://go.nuxtjs.dev/config-axios
@@ -51,4 +53,14 @@ export default {
 
   // Build Configuration: https://go.nuxtjs.dev/config-build
   build: {},
+
+  i18n: {
+    locales: [
+      { code: 'tr', name: 'Türkçe', file: 'tr.json' },
+      { code: 'en', name: 'English', file: 'en.json' },
+    ],
+    baseUrl: 'http://localhost:3000',
+    defaultLocale: 'tr',
+    langDir: 'languages/',
+  },
 }
