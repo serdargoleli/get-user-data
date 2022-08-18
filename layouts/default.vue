@@ -11,6 +11,13 @@ export default {
   components: {
     Navbar,
   },
+  data() {
+    return {
+      getCookieThemee: this.$cookiz.get('themee'),
+      themee: 'dark',
+    }
+  },
+
   created() {
     if (this.getCookieThemee) {
       this.themee = this.getCookieThemee
@@ -19,12 +26,6 @@ export default {
         path: '/',
         maxAge: 60 * 60 * 24 * 365,
       })
-    }
-  },
-  data() {
-    return {
-      getCookieThemee: this.$cookiz.get('themee'),
-      themee: 'dark',
     }
   },
   methods: {

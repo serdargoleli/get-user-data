@@ -57,7 +57,6 @@ export default {
     return {
       user: {},
       isLoader: true,
-      bgImage: '',
     }
   },
   methods: {

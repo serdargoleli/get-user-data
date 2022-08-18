@@ -55,9 +55,13 @@ export default {
   build: {},
 
   i18n: {
+    // flag package = https://www.npmjs.com/package/vue-country-flag
     locales: [
-      { code: 'tr', name: 'Türkçe', file: 'tr.json' },
-      { code: 'en', name: 'English', file: 'en.json' },
+      { code: 'tr', name: 'Türkçe', file: 'tr.json', flag: 'tr' },
+      { code: 'en', name: 'English', file: 'en.json', flag: 'gb' },
+      { code: 'fr', name: 'Français', file: 'en.json', flag: 'fr' },
+      { code: 'ru', name: 'Русский', file: 'en.json', flag: 'ru' },
+      { code: 'it', name: 'Italiano', file: 'en.json', flag: 'it' },
     ],
     baseUrl: 'http://localhost:3000',
     defaultLocale: 'tr',
