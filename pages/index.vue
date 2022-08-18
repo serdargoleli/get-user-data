@@ -27,8 +27,7 @@
             </div>
           </div>
           <div class="main-content-right">
-            <loader v-if="isLoader === true" />
-            <card :getData="getData" :user="user" v-else />
+            <card :getData="getData" :user="user" :loading="isLoader" />
           </div>
         </div>
       </div>
@@ -38,14 +37,13 @@
 
 <script>
 import card from '~/components/card.vue'
-import loader from '~/components/loader.vue'
+
 export default {
   name: 'IndexPage',
   layout: 'default',
   props: ['themee'],
   components: {
     card,
-    loader,
   },
   created() {
     if (Object.keys(this.user).length === 0) {
