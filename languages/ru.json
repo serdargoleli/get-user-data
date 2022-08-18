@@ -11,5 +11,7 @@
   "Code": "Почтовый индекс",
   "GetNewPerson": "Новый человек",
   "HomeCardTitle": "Случайные пользовательские данные",
-  "HomeCardContent": "Это приложение разработано с использованием  <a href='https://randomuser.me' target='_blank'>randomuser.me</a> Это не для любого мотива прибыли."
+  "HomeCardContent": "Это приложение разработано с использованием  <a href='https://randomuser.me' target='_blank'>randomuser.me</a> Это не для любого мотива прибыли.",
+  "PageTitle": "Генерация случайных пользовательских данных || Serdar Göleli || v.1.13",
+  "PageDescription": "Это SPA, генерирующее случайные человеческие данные, которые я разработал с помощью nuxtjs + tailwindcss."
 }

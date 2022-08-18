@@ -11,5 +11,7 @@
   "Code": "Code",
   "GetNewPerson": "Get New Person",
   "HomeCardTitle": "Random User Data",
-  "HomeCardContent": " This app is developed using <a href='https://randomuser.me' target='_blank'>randomuser.me</a> this not for any profit purpose."
+  "HomeCardContent": " This app is developed using <a href='https://randomuser.me' target='_blank'>randomuser.me</a> this not for any profit purpose.",
+  "PageTitle": "Generate Random User Data || Serdar Göleli || v.1.13",
+  "PageDescription": "It is a SPA that generates random human data that I developed using nuxtjs + tailwindcss."
 }

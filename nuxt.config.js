@@ -7,17 +7,21 @@ export default {
 
   // Global page headers: https://go.nuxtjs.dev/config-head
   head: {
-    title: 'get-user-data',
+    title: 'Rastgele Kullanıcı Verisi Oluştur || Serdar Göleli || v.1.13',
     htmlAttrs: {
       lang: 'tr',
     },
     meta: [
       { charset: 'utf-8' },
       { name: 'viewport', content: 'width=device-width, initial-scale=1' },
-      { hid: 'description', name: 'description', content: '' },
+      {
+        hid: 'description',
+        name: 'description',
+        content: "nuxtjs + tailwindcss kullanarak geliştirmiş olduğum rastgale insan verisi oluşturan SPA'dır.",
+      },
       { name: 'format-detection', content: 'telephone=no' },
     ],
-    link: [{ rel: 'icon', type: 'image/x-icon', href: '/favicon.ico' }],
+    link: [{ rel: 'icon', type: 'mage/svg+xml', href: '/icon.svg' }],
   },
 
   // Global CSS: https://go.nuxtjs.dev/config-css

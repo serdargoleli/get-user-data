@@ -42,6 +42,12 @@ export default {
   name: 'IndexPage',
   layout: 'default',
   props: ['themee'],
+  head() {
+    return {
+      title: this.$i18n.t('PageTitle'),
+      meta: [{ hid: 'description', name: 'description', content: this.$i18n.t('PageDescription') }],
+    }
+  },
   components: {
     card,
   },

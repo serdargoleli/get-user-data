@@ -11,5 +11,7 @@
   "Code": "Code Postal",
   "GetNewPerson": "Nouvelle Personne",
   "HomeCardTitle": "Random User Data",
-  "HomeCardContent": "Cette application est développée à l'aide de <a href='https://randomuser.me' target='_blank'>randomuser.me</a> Pas de but lucratif"
+  "HomeCardContent": "Cette application est développée à l'aide de <a href='https://randomuser.me' target='_blank'>randomuser.me</a> Pas de but lucratif",
+  "PageTitle": "Générer des données utilisateur aléatoires || Serdar Göleli || v.1.13",
+  "PageDescription": "C'est un SPA qui génère des données humaines aléatoires que j'ai développé en utilisant nuxtjs + tailwindcss."
 }

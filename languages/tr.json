@@ -11,5 +11,7 @@
   "Code": "Posta Kodu",
   "GetNewPerson": "Yeni Kişi",
   "HomeCardTitle": "Random User Data",
-  "HomeCardContent": "Bu uygulama <a href='https://randomuser.me' target='_blank'>randomuser.me</a> kullanılarak geliştirilmiştir. Herhangi bir kâr amacı gütmemektedir."
+  "HomeCardContent": "Bu uygulama <a href='https://randomuser.me' target='_blank'>randomuser.me</a> kullanılarak geliştirilmiştir. Herhangi bir kâr amacı gütmemektedir.",
+  "PageTitle": "Rastgele Kullanıcı Verisi Oluştur || Serdar Göleli || v.1.13",
+  "PageDescription": "nuxtjs + tailwindcss kullanarak geliştirmiş olduğum rastgale insan verisi oluşturan SPA'dır."
 }
