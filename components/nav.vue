@@ -4,7 +4,7 @@
       <div class="nav-container">
         <a href="https://serdargoleli.github.io/" target="_blank" class="nav-logo">
           <span class="logo">SERDAR GÖLELİ</span>
-          <span>Random User Data</span>
+          <span>{{ $t('HomeCardTitle') }} </span>
         </a>
         <div class="nav-menu" id="navbar-default">
           <ul class="nav-menu-list">

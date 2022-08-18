@@ -15,11 +15,8 @@
                     <path stroke-linecap="round" stroke-linejoin="round" d="M16 7a4 4 0 11-8 0 4 4 0 018 0zM12 14a7 7 0 00-7 7h14a7 7 0 00-7-7z" />
                   </svg>
                 </span>
-                <h5>Random User Data</h5>
-                <p>
-                  Bu uygulama <a href="https://randomuser.me" target="_blank" class="">randomuser.me</a> kullanılarak geliştirilmiştir. Herhangi bir
-                  kâr amacı gütmemektedir.
-                </p>
+                <h5>{{ $t('HomeCardTitle') }}</h5>
+                <p v-html="$t('HomeCardContent')"></p>
                 <p class="social-media mt-3">
                   <span class="inline-block mr-1">&#8226; <a href="https://github.com/serdargoleli" target="_blank">GitHub</a></span>
                   <span class="inline-block mr-1">&#8226; <a href="https://www.linkedin.com/in/serdargoleli/" target="_blank">Linkedin</a></span>

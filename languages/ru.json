@@ -1,0 +1,15 @@
+{
+  "CardSubtitle": "Меня зовут",
+  "Email": "Эл. адрес",
+  "Phone": "телефон",
+  "Gender": "Пол",
+  "Nationality": "Национальность",
+  "Country": "Страна",
+  "City": "Город",
+  "State": "Состояние",
+  "Street": "Улица",
+  "Code": "Почтовый индекс",
+  "GetNewPerson": "Новый человек",
+  "HomeCardTitle": "Случайные пользовательские данные",
+  "HomeCardContent": "Это приложение разработано с использованием  <a href='https://randomuser.me' target='_blank'>randomuser.me</a> Это не для любого мотива прибыли."
+}

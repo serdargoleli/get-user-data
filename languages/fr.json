@@ -1,0 +1,15 @@
+{
+  "CardSubtitle": "Mon Nom",
+  "Email": "E-Mail",
+  "Phone": "Téléphoner",
+  "Gender": "Le genre",
+  "Nationality": "Nationalité",
+  "Country": "Pays",
+  "City": "Ville",
+  "State": "Etat",
+  "Street": "Rue",
+  "Code": "Code Postal",
+  "GetNewPerson": "Nouvelle Personne",
+  "HomeCardTitle": "Random User Data",
+  "HomeCardContent": "Cette application est développée à l'aide de <a href='https://randomuser.me' target='_blank'>randomuser.me</a> Pas de but lucratif"
+}

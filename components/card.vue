@@ -1,24 +1,24 @@
 <template>
   <div class="card" v-if="user">
     <div class="cs-card-header relative">
-      <h3 class="subtitle">My Name is</h3>
+      <h3 class="subtitle">{{ $t('CardSubtitle') }}</h3>
       <h1 class="title">{{ user.name.first }} {{ user.name.last }}</h1>
       <div class="cs-img-box img-box-content" :style="`background-image: url('${user.picture.large}')`"></div>
     </div>
     <div class="content-box">
-      <span class="label">Email:</span>
+      <span class="label"> {{ $t('Email') }}: </span>
       <span>{{ user.email }}</span>
     </div>
     <div class="cs-content-box">
       <div class="pr-1">
         <div class="content-box">
-          <span class="label">Phone:</span>
+          <span class="label">{{ $t('Phone') }}:</span>
           <span>{{ user.phone }}</span>
         </div>
       </div>
       <div class="pl-1">
         <div class="content-box">
-          <span class="label">Male:</span>
+          <span class="label">{{ $t('Gender') }}:</span>
           <span>{{ user.gender }}</span>
         </div>
       </div>
@@ -27,13 +27,13 @@
     <div class="cs-content-box">
       <div class="pr-1">
         <div class="content-box">
-          <span class="label">Nationality:</span>
+          <span class="label">{{ $t('Nationality') }}:</span>
           <span>{{ user.nat }}</span>
         </div>
       </div>
       <div class="pl-1">
         <div class="content-box">
-          <span class="label">Country:</span>
+          <span class="label">{{ $t('Country') }}Country:</span>
           <span>{{ user.location.country }}</span>
         </div>
       </div>
@@ -41,13 +41,13 @@
     <div class="cs-content-box">
       <div class="pr-1">
         <div class="content-box">
-          <span class="label">City:</span>
+          <span class="label">{{ $t('City') }}:</span>
           <span>{{ user.location.city }}</span>
         </div>
       </div>
       <div class="pl-1">
         <div class="content-box">
-          <span class="label">State:</span>
+          <span class="label">{{ $t('State') }}:</span>
           <span>{{ user.location.state }}</span>
         </div>
       </div>
@@ -55,19 +55,19 @@
     <div class="cs-content-box">
       <div class="pr-1">
         <div class="content-box">
-          <span class="label">Street:</span>
+          <span class="label">{{ $t('Street') }}:</span>
           <span>{{ user.location.street.name }}</span>
         </div>
       </div>
       <div class="pl-1">
         <div class="content-box">
-          <span class="label">Code:</span>
+          <span class="label">{{ $t('Code') }}:</span>
           <span>{{ user.location.postcode }}</span>
         </div>
       </div>
     </div>
 
-    <button class="btn-yellow" @click="getData">Get New Person</button>
+    <button class="btn-yellow" @click="getData">{{ $t('GetNewPerson') }}</button>
   </div>
 </template>
 <script>
