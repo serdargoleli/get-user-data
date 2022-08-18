@@ -51,7 +51,11 @@ export default {
     loader,
   },
   created() {
-    this.getData()
+    if (Object.keys(this.user).length === 0) {
+      this.getData()
+    } else {
+      this.isLoader = false
+    }
   },
   data() {
     return {
@@ -59,14 +63,26 @@ export default {
       isLoader: true,
     }
   },
+  computed: {
+    getCurrentLanguage() {
+      let lang = this.$i18n.locales.find((i) => i.code === this.$i18n.locale)
+      return lang
+    },
+  },
   methods: {
     async getData() {
-      await this.$axios.$get().then((result) => {
-        if (result.results.length > 0) {
-          this.user = result.results[0]
-          this.isLoader = false
+      this.isLoader = true
+      await this.$axios.$get().then((response) => {
+        if (response.results.length > 0) {
+          this.user = response.results[0]
         }
+        this.isLoader = false
       })
+    },
+  },
+  watch: {
+    $route(to, from) {
+      this.getData()
     },
   },
 }
