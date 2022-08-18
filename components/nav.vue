@@ -6,28 +6,18 @@
           <span class="logo">SERDAR GÖLELİ</span>
           <span>{{ $t('HomeCardTitle') }} </span>
         </a>
-        <div class="nav-menu" id="navbar-default">
-          <ul class="nav-menu-list">
-            <li class="nav-menu-list-item">
-              <a href="https://github.com/serdargoleli/sgiphy" target="_blank">sgiphy</a>
-            </li>
-            <li class="nav-menu-list-item">
-              <a href="https://vue3-yenilikler.vercel.app/#/" target="_blank">Vue 3</a>
-            </li>
-            <li class="pr-0">
-              <button class="btn-dark-mode" @click="selectThemee">
-                <template v-if="themee === 'dark'">
-                  <light-mode />
-                </template>
-                <template v-else>
-                  <dark-mode />
-                </template>
-              </button>
-            </li>
-            <li class="cs-divide"><span></span></li>
-          </ul>
+        <div class="nav-menu relative" id="navbar-default">
+          <button class="btn-dark-mode pr-0" @click="selectThemee">
+            <template v-if="themee === 'dark'">
+              <light-mode />
+            </template>
+            <template v-else>
+              <dark-mode />
+            </template>
+          </button>
+          <span class="cs-divide"><span></span></span>
           <!-- Current Language -->
-          <button class="btn-dropdown-language">
+          <button class="btn-dropdown-language" @click="toggleLanguageList = !toggleLanguageList">
             <country-flag class="transition-none rounded" :country="getCurrentLanguage.flag" size="normal" />
             <span>{{ getCurrentLanguage.name }}</span>
             <svg class="ml-2 w-4 h-4" aria-hidden="true" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
@@ -35,10 +25,10 @@
             </svg>
           </button>
           <!-- Language List  -->
-          <div id="dropdown" class="dropdown-language">
+          <div id="dropdown" class="dropdown-language" :class="toggleLanguageList == false ? 'hidden' : 'block'">
             <ul class="py-1 text-sm text-gray-700 dark:text-gray-200">
               <li v-for="lang in $i18n.locales" :key="lang.code">
-                <nuxt-link class="select-language" :to="switchLocalePath(lang.code)" :class="getCurrentLanguage.code === lang.code ? ' active' : ''">
+                <nuxt-link class="select-language" :to="switchLocalePath(lang.code)" @click.native="toggleLanguageList = !toggleLanguageList" :class="getCurrentLanguage.code === lang.code ? ' active' : ''">
                   <country-flag class="rounded" :country="lang.flag" size="normal" /> <span>{{ lang.name }}</span>
                 </nuxt-link>
               </li>
@@ -60,7 +50,11 @@ export default {
     darkMode,
     CountryFlag,
   },
-
+  data() {
+    return {
+      toggleLanguageList: false,
+    }
+  },
   computed: {
     getCurrentLanguage() {
       let lang = this.$i18n.locales.find((i) => i.code === this.$i18n.locale)

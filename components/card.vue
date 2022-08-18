@@ -35,7 +35,7 @@
         </div>
         <div class="pl-1">
           <div class="content-box">
-            <span class="label">{{ $t('Country') }}Country:</span>
+            <span class="label">{{ $t('Country') }}:</span>
             <span>{{ user.location.country }}</span>
           </div>
         </div>
@@ -84,16 +84,16 @@ export default {
 </script>
 <style lang="postcss">
 .card {
-  @apply relative z-10 w-full md:w-3/4 p-7 mt-28 md:mt-0 rounded-lg shadow-md  bg-gray-300 dark:bg-gray-900;
+  @apply relative z-10 w-full md:w-3/4 p-7 mt-28 md:mt-0 rounded-lg shadow-md  bg-gray-200 dark:bg-gray-900;
 }
 .subtitle {
-  @apply text-base font-normal mb-1 text-gray-500 dark:text-gray-200;
+  @apply text-xs font-normal mb-1 text-gray-600 dark:text-gray-200;
 }
 .title {
   @apply text-2xl font-bold mb-4 text-gray-700 dark:text-gray-50;
 }
 .content-box {
-  @apply p-3  bg-gray-200 dark:bg-gray-800 mb-3 rounded-lg dark:text-gray-400;
+  @apply p-3  bg-gray-300 dark:bg-gray-800 mb-3 rounded-lg dark:text-gray-400;
 }
 .cs-content-box {
   @apply flex;
@@ -117,6 +117,6 @@ export default {
 .cs-img-box {
   @apply absolute rounded-xl z-10 bg-cover right-0 m-auto 
    w-24 h-24 md:w-32 md:h-32
-    -top-16  md:-top-20;
+    -top-16  md:-top-20 shadow-md;
 }
 </style>

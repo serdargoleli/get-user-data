@@ -1,6 +1,6 @@
 <template>
   <main :class="themee">
-    <section class="bg-gray-200 dark:bg-gray-800">
+    <section class="bg-gray-100 dark:bg-gray-800">
       <div class="container w-11/12 md:w-full mx-auto">
         <div class="main-content">
           <div class="main-content-left">
@@ -83,64 +83,4 @@ export default {
 }
 </script>
 
-<style lang="postcss">
-.main-content {
-  @apply flex flex-col items-center py-20 
-  md:flex-row;
-}
-.main-content-left,
-.main-content-right {
-  @apply relative
-  w-full md:w-6/12;
-}
-
-.glassmorphism {
-  @apply relative z-10;
-}
-
-.home-card {
-  @apply block p-6 max-w-sm rounded-lg shadow-md bg-gray-300 dark:bg-gray-900 
-  m-auto md:ml-auto;
-}
-.home-card h5 {
-  @apply mb-2 text-2xl font-bold tracking-tight text-gray-700 dark:text-gray-50;
-}
-.home-card p {
-  @apply font-normal text-gray-600 dark:text-gray-400;
-}
-.home-card p a {
-  @apply font-medium text-gray-600 dark:text-gray-300 hover:text-gray-900 dark:hover:text-white;
-}
-.svg-box {
-  @apply mb-3 inline-flex items-center justify-center p-2 rounded-md shadow-lg
-  bg-gray-200 dark:bg-yellow-400 
-  text-gray-900;
-}
-
-.cs-ellipse {
-  width: 50%;
-  height: 320px;
-  filter: blur(68px);
-  position: absolute;
-  border-radius: 50%;
-}
-.cs-yellow {
-  background: #fbbf24;
-  transform: translate(5%, -25%);
-  z-index: 3;
-}
-.cs-blue {
-  background: #3b82f6;
-  transform: translate(70%, -31%);
-  z-index: 2;
-}
-.cs-green {
-  background: #34d399;
-  transform: translate(-11%, 25%);
-  z-index: 1;
-}
-.cs-red {
-  background: #b91c1c;
-  transform: translate(74%, 5%);
-}
-</style>
+<style lang="postcss" src="../assets/css/home.postcss"></style>

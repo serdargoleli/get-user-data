@@ -2,81 +2,48 @@
   @apply bg-gray-200 border-gray-300 dark:border-gray-900 border-b-2 px-2 sm:px-4 py-2.5 dark:bg-gray-900 relative z-50;
 }
 .nav-container {
-  @apply container flex flex-wrap
-      justify-center md:justify-between
-      flex-col md:flex-row 
-      items-center mx-auto
-      text-center md:text-left;
+  @apply container  mx-auto
+  flex flex-wrap justify-between flex-row items-center;
 }
 .nav-logo {
-  @apply flex  flex-col mb-6 md:mb-auto;
+  @apply flex flex-col mb-2 md:mb-auto;
 }
 .nav-logo .logo {
-  @apply text-gray-700  font-bold text-2xl dark:text-gray-50;
+  @apply text-gray-700  font-bold text-base md:text-2xl dark:text-gray-50;
 }
 .nav-logo .logo + span {
-  @apply text-gray-400 text-sm;
-}
-.nav-menu {
-  @apply block w-auto;
-}
-.nav-menu-list {
-  @apply flex flex-row items-center space-x-4 pr-3 mt-0 text-sm font-medium;
-}
-.nav-menu-list-item a {
-  @apply block
-           py-2 pr-4 pl-3
-            text-gray-700 rounded
-            md:hover:bg-transparent 
-           md:border-0 md:hover:text-blue-700 md:p-0 
-           dark:text-gray-400
-           md:dark:hover:text-white
-           dark:hover:bg-gray-700 dark:hover:text-white 
-            md:dark:hover:bg-transparent;
-}
-.nav-menu-list .cs-divide {
-  @apply h-6 w-px bg-gray-600 rounded hidden md:block;
-}
-.nav-menu .btn-dark-mode {
-  width: 36px;
-  height: 36px;
-  background-color: #3e4350;
-  color: #bdbdbd;
-  @apply rounded-md p-2 hover:bg-gray-700 duration-300 flex items-center;
-}
-.nav-menu .btn-dark-mode:hover {
-  background-color: #b6b6b68a;
-  color: #bdbdbd;
+  @apply text-gray-400 text-xs md:text-sm;
 }
 
+.cs-divide {
+  @apply h-6 w-px mx-2 bg-gray-600 rounded hidden md:block;
+}
+.nav-menu .btn-dark-mode {
+  @apply rounded-md p-2 w-9	h-9 mr-1 md:mr-0
+  text-gray-600 duration-300 flex items-center
+  hover:bg-gray-100 dark:hover:bg-gray-800 dark:text-gray-400;
+}
+.nav-menu .btn-dark-mode:hover svg {
+  @apply hover:rotate-45 transform scale-110;
+}
 .nav-menu {
-  @apply flex flex-col md:flex-row items-center relative;
+  @apply flex flex-row items-center relative;
 }
 
 .btn-dropdown-language {
-  @apply font-medium rounded-lg p-1
-      text-sm text-white text-center inline-flex items-center
-      dark:hover:bg-gray-800
-       bg-transparent hover:bg-gray-100 pr-3 text-gray-700 dark:text-gray-400
-       md:dark:hover:text-white
-       dark:hover:text-white
-       rounded;
+  @apply hover:bg-gray-100 text-gray-700  
+  dark:hover:bg-gray-800 dark:text-gray-400  dark:hover:text-white 
+  font-medium text-center text-xs md:text-sm
+  rounded-lg inline-flex items-center p-0.5 md:p-1 pr-3;
 }
 
 .nav-menu .dropdown-language {
-  @apply w-44 shadow rounded hidden
-    absolute transform-none right-0
-    bg-gray-200 dark:bg-gray-700;
-}
-
-.btn-dropdown-language:hover + .dropdown-language,
-.dropdown-language:hover {
-  @apply block top-12;
+  @apply z-10 w-44 bg-white rounded right-0 divide-gray-100 shadow dark:bg-gray-700 absolute top-full;
 }
 
 .select-language {
   @apply flex items-center
-  py-1 px-4  opacity-75 hover:opacity-100 font-normal
+ pt-0.5 px-2.5 md:py-1 md:px-4  opacity-75 hover:opacity-100 font-normal
   text-gray-500 hover:text-gray-700 hover:bg-gray-300
   dark:text-gray-500 dark:hover:text-gray-100 dark:hover:bg-gray-600;
 }
