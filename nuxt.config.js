@@ -38,6 +38,7 @@ export default {
     // https://go.nuxtjs.dev/tailwindcss
     '@nuxtjs/tailwindcss',
     '@nuxt/postcss8',
+    '@nuxtjs/pwa',
   ],
 
   // Modules: https://go.nuxtjs.dev/config-modules
@@ -70,5 +71,16 @@ export default {
     baseUrl: 'http://localhost:3000',
     defaultLocale: 'tr',
     langDir: 'languages/',
+  },
+  pwa: {
+    manifest: {
+      name: 'Rastgele Kullanıcı Verisi',
+      lang: 'tr',
+      useWebmanifestExtension: false,
+    },
+    icon: {
+      fileName: 'icon.png',
+      sizes: [64, 120, 144, 152, 192, 384, 512],
+    },
   },
 }
